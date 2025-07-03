@@ -24,7 +24,6 @@
 ## 快速開始
 ### 下載
 ```bash
-cmd
 wget https://github.com/你的帳號/你的專案/releases/download/v1.0.0/urlhealthmonitor.tar
 
 # 匯入
