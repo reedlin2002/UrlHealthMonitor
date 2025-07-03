@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlHealthMonitorApp", "UrlHealthMonitorApp\UrlHealthMonitorApp.csproj", "{63B2304F-AF59-42E6-A0B4-CCA491F8A946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlHealthMonitorApp.Tests", "UrlHealthMonitorApp.Tests\UrlHealthMonitorApp.Tests.csproj", "{55DF304D-CD9A-475E-AF50-589FF4AF4689}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63B2304F-AF59-42E6-A0B4-CCA491F8A946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B2304F-AF59-42E6-A0B4-CCA491F8A946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B2304F-AF59-42E6-A0B4-CCA491F8A946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B2304F-AF59-42E6-A0B4-CCA491F8A946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55DF304D-CD9A-475E-AF50-589FF4AF4689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55DF304D-CD9A-475E-AF50-589FF4AF4689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55DF304D-CD9A-475E-AF50-589FF4AF4689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55DF304D-CD9A-475E-AF50-589FF4AF4689}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
