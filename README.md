@@ -22,6 +22,20 @@
 | Render      | 雲端服務部署示範，體現線上服務能力                             |
 
 ## 快速開始
+### 下載
+```bash
+wget https://github.com/你的帳號/你的專案/releases/download/v1.0.0/urlhealthmonitor.tar
+
+# 匯入
+docker load -i urlhealthmonitor.tar
+
+# 查看 Image
+docker images
+
+# 執行
+docker run ...
+```
+
 ### 本地測試 (需安裝 .NET 8 SDK)
 ```bash
 git clone https://github.com/reedlin2002/UrlHealthMonitorApp.git
