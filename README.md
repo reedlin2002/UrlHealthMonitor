@@ -66,7 +66,7 @@ docker run --rm -v ${PWD}/data:/app/data -e DATABASE_PATH=/app/data/results.db u
 ```
 
 > Windows PowerShell 注意路徑格式：
-`docker run --rm -v C:/Users/JerryLin/Desktop/UrlHealthMonitor/data:/app/data -e
+`docker run --rm -v C:/Users/User/UrlHealthMonitor/data:/app/data -e
 DATABASE_PATH=/app/data/results.db urlhealthmonitor
 "https://www.youtube.com/,https://httpbin.org/status/404"`
 
