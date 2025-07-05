@@ -37,6 +37,10 @@ docker images
 docker run ...
 ```
 
+```
+docker run -d -p 5001:5000 --name urlhealthmonitor urlhealthmonitor
+```
+
 ### 本地測試 (需安裝 .NET 8 SDK)
 ```bash
 git clone https://github.com/reedlin2002/UrlHealthMonitorApp.git
