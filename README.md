@@ -70,17 +70,6 @@ docker run --rm -v ${PWD}/data:/app/data -e DATABASE_PATH=/app/data/results.db u
 DATABASE_PATH=/app/data/results.db urlhealthmonitor
 "https://www.youtube.com/,https://httpbin.org/status/404"`
 
-## 專案結構
-
-UrlHealthMonitorApp/ <br>
-│ <br>
-├─ Program.cs         # 主程式，讀取輸入並呼叫狀態檢查器與資料庫 <br>
-├─ StatusChecker.cs   # 負責 HTTP 請求與狀態碼檢查 <br>
-├─ Database.cs        # SQLite 操作封裝 <br>
-├─ UrlHealthMonitorApp.csproj <br>
-├─ Dockerfile <br>
-└─ UrlHealthMonitorApp.Tests/  # 單元測試專案 (TDD) <br>
-
 ## TDD 與測試說明
 使用 xUnit + FluentAssertions 撰寫測試。
 
