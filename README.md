@@ -25,10 +25,10 @@
 
 ###查看
 ```
-#啟動容器，外部使用localhost:5001 連進去，內部服務跑在容器的 5000 端口。
+# 啟動容器，外部使用localhost:5001 連進去，內部服務跑在容器的 5000 端口。
 docker run -d -p 5001:5000 --name urlhealthmonitor urlhealthmonitor
 
-#新增你要檢查的網站
+# 新增你要檢查的網站
 docker exec -it urlhealthmonitor dotnet UrlHealthMonitorApp.dll add <你的URL>
 ```
 
