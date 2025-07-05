@@ -1,5 +1,5 @@
 # UrlHealthMonitor
-一款基於 .NET 8 的網址健康檢查工具，具備 HTTP 狀態碼監控、響應時間測量與結果持久化功能。專案包含單元測試（TDD 實踐），並已容器化可部署於 Docker 環境及雲端平台（如 Render）。
+一款基於 .NET 8 的網址健康檢查工具，具備 HTTP 狀態碼監控、響應時間測量與結果持久化功能。專案包含單元測試（TDD 實踐），並已容器化可部署於 Docker 環境。
 
 ![HTML Image](dashboard.png)
 ## 功能特色
@@ -23,22 +23,14 @@
 | Render      | 雲端服務部署示範，體現線上服務能力                             |
 
 ## 快速開始
-### 下載
-```bash
-wget https://github.com/reedlin2002/UrlHealthMonitor/releases/download/v1.0.0/urlhealthmonitor.tar
 
-# 匯入
-docker load -i urlhealthmonitor.tar
-
-# 查看 Image
-docker images
-
-# 執行
-docker run ...
+###查看
 ```
-
-```
+#啟動容器，外部使用localhost:5001 連進去，內部服務跑在容器的 5000 端口。
 docker run -d -p 5001:5000 --name urlhealthmonitor urlhealthmonitor
+
+#新增你要檢查的網站
+docker exec -it urlhealthmonitor dotnet UrlHealthMonitorApp.dll add <你的URL>
 ```
 
 ### 本地測試 (需安裝 .NET 8 SDK)
@@ -54,6 +46,9 @@ dotnet test
 
 # 執行程式（可帶多個網址，逗號分隔）
 dotnet run -- "https://www.youtube.com/,https://httpbin.org/status/404"
+
+#使用localhost:5000 連進去
+donet run --serve  ()
 ```
 
 ### Docker 建置與執行
