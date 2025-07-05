@@ -10,13 +10,11 @@ namespace UrlHealthMonitorApp
     {
         private readonly HttpClient _client;
 
-        // 建構式：注入 HttpClient（方便測試時提供假的）
         public StatusChecker(HttpClient? client = null)
         {
             _client = client ?? new HttpClient();
         }
 
-        // 非同步檢查
         public async Task<(HttpStatusCode? statusCode, long responseTimeMs)> GetStatusCodeAsync(string url)
         {
             try
@@ -29,7 +27,6 @@ namespace UrlHealthMonitorApp
             }
             catch (HttpRequestException)
             {
-                // 網路錯誤回傳 null
                 return (null, 0);
             }
         }

@@ -1,14 +1,17 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+# Build階段
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY . .
+RUN dotnet publish "./UrlHealthMonitorApp.csproj" -c Release -o /app/publish
+
+# Runtime階段
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
+COPY --from=build /app/publish .
 
-COPY *.csproj ./
-RUN dotnet restore
+# 設定環境變數，指定 ASP.NET Core 監聽的 URL
+ENV ASPNETCORE_URLS=http://+:5000
 
-COPY . ./
-RUN dotnet publish -c Release -o out
+EXPOSE 5000
 
-FROM mcr.microsoft.com/dotnet/runtime:8.0
-WORKDIR /app
-COPY --from=build-env /app/out ./
-
-ENTRYPOINT ["dotnet", "UrlHealthMonitorApp.dll"]
+ENTRYPOINT ["dotnet", "UrlHealthMonitorApp.dll", "serve"]
