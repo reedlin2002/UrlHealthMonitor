@@ -17,10 +17,10 @@
   * serve → 啟動 Web API + Dashboard
   * list/add/remove → 執行 CLI 指令
   * 其他/無參數 → 啟動 Worker Service 定時檢查
-*  Web API
+* Web API
   * / → 回傳 Dashboard HTML
   * /results → 回傳最新 JSON 結果
-*  背景監控
+* 背景監控
   * MonitorService 每 30 秒檢查一次所有 URL
   * 寫入 SQLite 紀錄
 
