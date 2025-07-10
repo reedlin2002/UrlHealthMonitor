@@ -75,11 +75,8 @@ donet run --serve  ()
 # 在 UrlHealthMonitorApp 專案根目錄執行
 docker build -t urlhealthmonitor .
 
-# 建立本機資料夾用於保存資料庫
-mkdir -p ./data
-
-# 執行容器，帶入網址參數並掛載本機資料夾
-docker run --rm -v ${PWD}/data:/app/data -e DATABASE_PATH=/app/data/results.db urlhealthmonitor "https://www.youtube.com/,https://httpbin.org/status/404"
+# 執行容器
+docker run -d -p 5001:5000 --name urlhealthmonitor urlhealthmonitor
 ```
 
 > Windows PowerShell 注意路徑格式：
