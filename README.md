@@ -46,6 +46,10 @@ docker exec -it urlhealthmonitor dotnet UrlHealthMonitorApp.dll add <你的URL>
 
 # 移除你要檢查的網站
 docker exec -it urlhealthmonitor dotnet UrlHealthMonitorApp.dll remove <你的URL>
+
+# 列出目前監控的 URL
+docker exec -it urlhealthmonitor dotnet UrlHealthMonitorApp.dll list
+
 ```
 
 ### 本地測試 (需安裝 .NET 8 SDK)
